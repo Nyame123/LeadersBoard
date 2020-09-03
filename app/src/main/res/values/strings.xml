@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">GAD LeaderBoard</string>
+    <string name="tab_text_1">Learning Leaders</string>
+    <string name="tab_text_2">Skills IQ Leaders</string>
+    <string name="_234_learning_hours">%1$s learning hours, %2$s. </string>
+    <string name="skills_iq">%1$s skills IQ Score, %2$s. </string>
+</resources>
