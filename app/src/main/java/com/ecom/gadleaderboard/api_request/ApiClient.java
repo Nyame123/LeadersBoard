@@ -19,10 +19,12 @@ import okio.Buffer;
 import retrofit2.Retrofit;
 import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory;
 import retrofit2.converter.gson.GsonConverterFactory;
+import retrofit2.converter.scalars.ScalarsConverterFactory;
 
 public class ApiClient {
 
     public static String BASE_URL = "https://gadsapi.herokuapp.com/";
+    public static String GOOGLE_BASE_URL = "https://docs.google.com/forms/d/e/";
     static Gson gson = new GsonBuilder()
             .setLenient()
             .create();
@@ -44,6 +46,26 @@ public class ApiClient {
                 .client(okHttpClient)
                 .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
                 .addConverterFactory(GsonConverterFactory.create(gson))
+                .build();
+    }
+
+    public static Retrofit googleFormsAdapter() {
+
+
+        LoggingInterceptor interceptor = new LoggingInterceptor();
+        //HttpLoggingInterceptor interceptors = new HttpLoggingInterceptor();
+        OkHttpClient okHttpClient = new OkHttpClient().newBuilder()
+                .connectTimeout(30, TimeUnit.SECONDS)
+                .readTimeout(30, TimeUnit.SECONDS)
+                .writeTimeout(30, TimeUnit.SECONDS)
+                .addInterceptor(interceptor)
+                .build();
+        return new Retrofit.Builder()
+                .baseUrl(GOOGLE_BASE_URL)
+                .client(okHttpClient)
+                .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
+                .addConverterFactory(GsonConverterFactory.create(gson))
+                .addConverterFactory(ScalarsConverterFactory.create())
                 .build();
     }
 

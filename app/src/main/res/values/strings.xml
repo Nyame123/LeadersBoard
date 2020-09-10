@@ -4,4 +4,6 @@
     <string name="tab_text_2">Skills IQ Leaders</string>
     <string name="_234_learning_hours">%1$s learning hours, %2$s. </string>
     <string name="skills_iq">%1$s skills IQ Score, %2$s. </string>
+    <string name="successful_message">Submission Successful</string>
+    <string name="error_message">Submission not Successful</string>
 </resources>

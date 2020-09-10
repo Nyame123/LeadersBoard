@@ -3,6 +3,8 @@
     <color name="colorPrimary">#FF000000</color>
     <color name="colorPrimaryDark">#FF000000</color>
     <color name="colorAccent">#FFFFFF</color>
+    <color name="colorYellow">#ECAF08</color>
+    <color name="colorDeepYellow">#FFFF9800</color>
     <color name="black">#000000</color>
     <color name="white">#FFFFFF</color>
     <color name="white_grey">#FFCDC9C9</color>
