@@ -12,7 +12,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme.NoActionBar">
-        <activity android:name=".submission.SubmissionActivity"/>
+        <activity android:name=".submission.SubmissionActivity"
+            android:theme="@style/SubmissionTheme"/>
         <activity android:name=".MainActivity" />
         <activity
             android:name=".splash.SplashActivity"
